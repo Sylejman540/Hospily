@@ -1,7 +1,4 @@
 <x-layout title="Hospily">
-   
-
-
     <section class="hero-gradient h-screen flex items-center justify-center text-center px-4">
         <div class="max-w-4xl">
             <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Empowering Care with Seamless Technology.</h1>
