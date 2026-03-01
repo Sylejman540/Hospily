@@ -1,247 +1,214 @@
-<x-layout title="Hospily">
-    <section class="hero-gradient h-screen flex items-center justify-center text-center px-4">
-        <div class="max-w-4xl">
-            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Empowering Care with Seamless Technology.</h1>
-            <p class="text-xl text-blue-50 mb-10 max-w-2xl mx-auto">
-                Streamline clinical workflows, enhance patient experiences, and manage your entire medical facility through our globally recognized, HIPAA-compliant SaaS ecosystem.
-            </p>
-            <button class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full text-lg font-bold shadow-xl transition-all transform hover:-translate-y-1">
-                Contact Us Today
-            </button>
-        </div>
-    </section>
-
-    <section class="bg-slate-50 py-16 border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-8 grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div class="flex flex-col items-center text-center">
-                <div class="text-blue-600 mb-3"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg></div>
-                <h4 class="font-bold text-slate-800">Secure Cloud</h4>
-                <p class="text-sm text-slate-500">Tier-4 Data Centers</p>
-            </div>
-            <div class="flex flex-col items-center text-center">
-                <div class="text-blue-600 mb-3"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg></div>
-                <h4 class="font-bold text-slate-800">HIPAA Ready</h4>
-                <p class="text-sm text-slate-500">Global Compliance</p>
-            </div>
-            <div class="flex flex-col items-center text-center">
-                <div class="text-blue-600 mb-3"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div>
-                <h4 class="font-bold text-slate-800">99.9% Uptime</h4>
-                <p class="text-sm text-slate-500">Always-on Reliability</p>
-            </div>
-            <div class="flex flex-col items-center text-center">
-                <div class="text-blue-600 mb-3"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg></div>
-                <h4 class="font-bold text-slate-800">AES-256 Encryption</h4>
-                <p class="text-sm text-slate-500">End-to-End Privacy</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="solutions" class="py-24 px-8 max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold mb-4 text-slate-900">The Problems We Solve</h2>
-            <p class="text-slate-500">Eliminating administrative friction so your medical staff can focus entirely on what matters most: patient health and recovery.</p>
-        </div>
-
-        <div class="grid md:grid-cols-12 gap-12">
-            <div class="md:col-span-5 space-y-4">
-                <div class="problem-card bg-blue-600 text-white p-6 rounded-xl cursor-pointer shadow-lg border-l-4 border-blue-400">
-                    <span class="text-xs font-bold opacity-80 uppercase tracking-widest">01</span>
-                    <h3 class="text-xl font-bold mt-1">Fragmented Data</h3>
-                    <p class="mt-2 text-sm opacity-90">Centralize all patient history and clinical records in one source.</p>
-                </div>
-                <div class="problem-card p-6 rounded-xl cursor-pointer border border-slate-100 hover:shadow-md transition group">
-                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">02</span>
-                    <h3 class="text-xl font-bold mt-1 group-hover:text-white">Scheduling Chaos</h3>
-                    <p class="mt-2 text-sm text-slate-500 group-hover:text-blue-50">Automate appointments and reduce patient no-shows significantly.</p>
-                </div>
-                <div class="problem-card p-6 rounded-xl cursor-pointer border border-slate-100 hover:shadow-md transition group">
-                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">03</span>
-                    <h3 class="text-xl font-bold mt-1 group-hover:text-white">Billing Leakage</h3>
-                    <p class="mt-2 text-sm text-slate-500 group-hover:text-blue-50">Capture every billable event with integrated pharmacy and labs.</p>
-                </div>
-                <div class="problem-card p-6 rounded-xl cursor-pointer border border-slate-100 hover:shadow-md transition group">
-                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">04</span>
-                    <h3 class="text-xl font-bold mt-1 group-hover:text-white">Compliance Risks</h3>
-                    <p class="mt-2 text-sm text-slate-500 group-hover:text-blue-50">Stay ahead of international healthcare regulations effortlessly.</p>
-                </div>
-            </div>
-            <div class="md:col-span-7 bg-slate-50 rounded-2xl p-10 flex flex-col justify-center border border-slate-100 shadow-inner">
-                <h3 class="text-3xl font-bold text-slate-900 mb-4">Unified Clinical Management</h3>
-                <p class="text-lg text-slate-600 leading-relaxed mb-6">Our system bridges the gap between administrative staff and medical professionals. By unifying fragmented data, Hospily ensures that every doctor has the full patient context within seconds, reducing errors and saving lives.</p>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200">
-                        <p class="text-blue-600 font-bold text-2xl">40%</p>
-                        <p class="text-xs uppercase font-bold text-slate-400">Time Saved</p>
+<x-layouts.marketing title="Hospily">
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-white pb-24 pt-16 sm:pb-32 sm:pt-24 lg:pt-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-x-12 lg:items-center">
+                <div class="lg:col-span-7">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-clinical-50 border border-clinical-100 mb-8">
+                        <span class="flex h-2 w-2 rounded-full bg-clinical-500"></span>
+                        <span class="text-xs font-bold text-clinical-600 uppercase tracking-widest">Global ISO 27001 Certified</span>
                     </div>
-                    <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200">
-                        <p class="text-blue-600 font-bold text-2xl">0%</p>
-                        <p class="text-xs uppercase font-bold text-slate-400">Data Loss</p>
+                    <h1 class="text-5xl md:text-7xl font-extrabold text-clinical-900 tracking-tight leading-[1.1] mb-8">
+                        The Infrastructure for <span class="text-clinical-600">Clinical Excellence.</span>
+                    </h1>
+                    <p class="text-xl text-clinical-500 leading-relaxed max-w-2xl mb-12">
+                        Streamline complex hospital workflows with an enterprise-grade SaaS ecosystem. Built for security, designed for doctors, and trusted by leading medical institutions worldwide.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="/register" class="inline-flex justify-center items-center px-8 py-4 bg-clinical-600 text-white rounded-clinical font-bold text-lg hover:bg-clinical-700 shadow-xl shadow-clinical-200 transition-all hover:-translate-y-1">
+                            Deploy Hospily Now
+                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </a>
+                        <a href="#demo" class="inline-flex justify-center items-center px-8 py-4 bg-white text-clinical-900 border border-clinical-200 rounded-clinical font-bold text-lg hover:bg-clinical-50 transition-all">
+                            Request Architecture Brief
+                        </a>
+                    </div>
+                    
+                    <div class="mt-16 flex items-center gap-8 grayscale opacity-50">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="Partner" class="h-6">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Partner" class="h-6">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_\"Alt\"_Logo.svg" alt="Partner" class="h-6" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg'">
+                    </div>
+                </div>
+                <div class="mt-16 lg:mt-0 lg:col-span-5 relative">
+                    <div class="relative bg-clinical-50 rounded-[2.5rem] p-4 lg:p-8 shadow-inner border border-clinical-100">
+                        <div class="bg-white rounded-2xl shadow-2xl border border-clinical-100 overflow-hidden transform lg:rotate-2 hover:rotate-0 transition-transform duration-700">
+                            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=1200" alt="Hospily Interface" class="w-full">
+                        </div>
+                        <!-- Floating Badges -->
+                        <div class="absolute -top-4 -right-4 bg-emerald-500 text-white p-4 rounded-2xl shadow-xl flex items-center gap-3 animate-bounce">
+                           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                           <div class="text-xs font-bold leading-tight">HIPAA<br>COMPLIANT</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="features" class="py-24 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-8">
+    <!-- Trust indicators -->
+    <section class="bg-clinical-50 py-16 border-y border-clinical-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 overflow-hidden">
+            <div class="flex flex-wrap justify-between gap-12 items-center opacity-70">
+                <div class="flex items-center gap-4">
+                    <span class="text-4xl font-black text-clinical-900">400+</span>
+                    <span class="text-sm font-bold text-clinical-500 uppercase leading-tight">Medical Facilities<br>Managed</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span class="text-4xl font-black text-clinical-900">12M</span>
+                    <span class="text-sm font-bold text-clinical-500 uppercase leading-tight">Patient Records<br>Secured</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span class="text-4xl font-black text-clinical-900">99.9%</span>
+                    <span class="text-sm font-bold text-clinical-500 uppercase leading-tight">Uptime Tier-4<br>Reliability</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span class="text-4xl font-black text-clinical-900">24/7</span>
+                    <span class="text-sm font-bold text-clinical-500 uppercase leading-tight">Clinical Staff<br>Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Focus -->
+    <section id="security" class="py-32 bg-clinical-900 text-white overflow-hidden relative">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:20px_20px]"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-24">
+                <h2 class="text-clinical-400 font-bold uppercase tracking-widest text-sm mb-4">Enterprise Security</h2>
+                <h3 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">Built Like a Vault. Operated in the Cloud.</h3>
+                <p class="text-xl text-clinical-400 max-w-2xl mx-auto">We exceed international standards for medical data protection, ensuring your facility remains compliant and your patients remain private.</p>
+            </div>
+
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:-translate-y-2 hover:shadow-xl transition-all group">
-                    <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                <div class="bg-clinical-800/50 backdrop-blur p-10 rounded-[2rem] border border-clinical-700/50">
+                    <div class="w-14 h-14 bg-clinical-600 rounded-2xl flex items-center justify-center mb-8">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Patient Management</h3>
-                    <p class="text-slate-500 text-sm">Complete electronic health records with history tracking.</p>
+                    <h4 class="text-2xl font-bold mb-4">E2E Encryption</h4>
+                    <p class="text-clinical-400 leading-relaxed">AES-256 bit encryption for all data at rest and in transit. Your keys, your data, total control.</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:-translate-y-2 hover:shadow-xl transition-all group">
-                    <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                <div class="bg-clinical-800/50 backdrop-blur p-10 rounded-[2rem] border border-clinical-700/50">
+                    <div class="w-14 h-14 bg-clinical-600 rounded-2xl flex items-center justify-center mb-8">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Appointment Scheduling</h3>
-                    <p class="text-slate-500 text-sm">Smart booking system with automated reminders.</p>
+                    <h4 class="text-2xl font-bold mb-4">RBAC Isolation</h4>
+                    <p class="text-clinical-400 leading-relaxed">Granular Role-Based Access Control ensures medical staff only see the data essential for their specific duties.</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:-translate-y-2 hover:shadow-xl transition-all group">
-                    <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                <div class="bg-clinical-800/50 backdrop-blur p-10 rounded-[2rem] border border-clinical-700/50">
+                    <div class="w-14 h-14 bg-clinical-600 rounded-2xl flex items-center justify-center mb-8">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Doctor Dashboard</h3>
-                    <p class="text-slate-500 text-sm">Personalized workspace for clinical efficiency.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:-translate-y-2 hover:shadow-xl transition-all group">
-                    <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Billing & Insurance</h3>
-                    <p class="text-slate-500 text-sm">Automated invoicing and insurance claim processing.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:-translate-y-2 hover:shadow-xl transition-all group">
-                    <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.183.394l-1.154.908a2 2 0 00-.747 2.357l.584 1.46a2 2 0 001.996 1.228h13.102a2 2 0 001.996-1.228l.584-1.46a2 2 0 00-.747-2.357l-1.154-.908z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Pharmacy Integration</h3>
-                    <p class="text-slate-500 text-sm">Real-time inventory and digital prescriptions.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:-translate-y-2 hover:shadow-xl transition-all group">
-                    <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Reports & Analytics</h3>
-                    <p class="text-slate-500 text-sm">Data-driven insights for hospital performance.</p>
+                    <h4 class="text-2xl font-bold mb-4">Audit Transparency</h4>
+                    <p class="text-clinical-400 leading-relaxed">Immutable audit logs tracking every single interaction within the system for complete accountability.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 bg-white text-center px-4">
-        <h2 class="text-4xl font-bold mb-12">Operate Your Hospital From One Intelligent Dashboard</h2>
-        <div class="max-w-6xl mx-auto rounded-3xl shadow-2xl border border-slate-200 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1551288049-bbbda5366391?auto=format&fit=crop&q=80&w=1800" alt="Hospily Dashboard" class="w-full">
-        </div>
-    </section>
+    <!-- Pricing -->
+    <section id="pricing" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h3 class="text-4xl font-bold text-clinical-900 mb-4">Scalable Plans for Any Facility</h3>
+                <p class="text-clinical-500 max-w-xl mx-auto text-lg">From private clinics to multi-national hospital groups, Hospily scales with your administrative needs.</p>
+            </div>
 
-    <section class="bg-slate-900 py-24 text-white">
-        <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-16 items-center">
-            <div>
-                <h2 class="text-4xl font-bold mb-6">World-Class Security. By Design.</h2>
-                <p class="text-slate-400 mb-8">We understand that patient data is the most sensitive information on earth. Our infrastructure is built to exceed global standards.</p>
-                <div class="grid grid-cols-1 gap-4">
-                    <div class="flex items-center gap-3">
-                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
-                        <span>Role-Based Access Control (RBAC)</span>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Starter -->
+                <div class="p-10 rounded-[2.5rem] bg-clinical-50 border border-clinical-100 flex flex-col">
+                    <h4 class="text-lg font-bold text-clinical-600 mb-2">Clinic Starter</h4>
+                    <div class="flex items-baseline gap-1 mb-6">
+                        <span class="text-4xl font-black text-clinical-900">$199</span>
+                        <span class="text-clinical-500 font-medium">/month</span>
                     </div>
-                    <div class="flex items-center gap-3">
-                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
-                        <span>AES-256 Data Encryption</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
-                        <span>Real-time Audit Logs</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
-                        <span>Redundant Secure Backups</span>
-                    </div>
+                    <p class="text-clinical-500 mb-8 font-medium">Perfect for small private practices starting their digital journey.</p>
+                    <ul class="space-y-4 mb-10 flex-1">
+                        <li class="flex items-center gap-3 text-sm font-semibold text-clinical-700">
+                            <svg class="w-5 h-5 text- clinical-600" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                            Up to 5 Practitioners
+                        </li>
+                        <li class="flex items-center gap-3 text-sm font-semibold text-clinical-700">
+                            <svg class="w-5 h-5 text-clinical-600" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                            Patient EHR Management
+                        </li>
+                        <li class="flex items-center gap-3 text-sm font-semibold text-clinical-700">
+                            <svg class="w-5 h-5 text-clinical-600" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                            Digital Scheduling
+                        </li>
+                    </ul>
+                    <a href="/register" class="w-full py-4 rounded-clinical bg-white border border-clinical-200 text-clinical-900 font-bold hover:bg-clinical-100 transition text-center">Get Started</a>
                 </div>
-            </div>
-            <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700">
-                <div class="text-blue-400 mb-4">
-                    <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5zm0 2.18l7 3.89v4.93c0 4.24-2.97 8.22-7 9.31-4.03-1.09-7-5.07-7-9.31V8.07l7-3.89z"/></svg>
-                </div>
-                <h3 class="text-2xl font-bold mb-4 text-white">Cloud Scalability</h3>
-                <p class="text-slate-400">Scale from a small clinic to a national hospital network without changing platforms. Our infrastructure expands with you.</p>
-            </div>
-        </div>
-    </section>
 
-    <section id="pricing" class="py-24 bg-white px-8">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
-            <div class="p-10 rounded-3xl border border-slate-200 hover:scale-105 transition-transform">
-                <h3 class="text-xl font-bold mb-4">Starter</h3>
-                <p class="text-4xl font-bold mb-6">$199<span class="text-lg text-slate-400">/mo</span></p>
-                <ul class="space-y-4 text-slate-500 mb-10">
-                    <li>Up to 5 Doctors</li>
-                    <li>Basic Patient Records</li>
-                    <li>Appointment Scheduling</li>
-                    <li>Email Support</li>
-                </ul>
-                <button class="w-full py-3 border border-blue-600 text-blue-600 rounded-xl font-bold hover:bg-blue-50 transition">Get Started</button>
-            </div>
-            <div class="p-10 rounded-3xl bg-blue-600 text-white shadow-2xl scale-110 relative z-10">
-                <span class="absolute top-0 right-10 -translate-y-1/2 bg-green-400 text-slate-900 text-xs font-bold px-4 py-1 rounded-full uppercase">Most Popular</span>
-                <h3 class="text-xl font-bold mb-4">Professional</h3>
-                <p class="text-4xl font-bold mb-6">$499<span class="text-lg opacity-60">/mo</span></p>
-                <ul class="space-y-4 opacity-90 mb-10 text-white">
-                    <li>Up to 25 Doctors</li>
-                    <li>Advanced Analytics</li>
-                    <li>Pharmacy Integration</li>
-                    <li>24/7 Priority Support</li>
-                </ul>
-                <button class="w-full py-3 bg-white text-blue-600 rounded-xl font-bold hover:bg-slate-50 transition">Select Plan</button>
-            </div>
-            <div class="p-10 rounded-3xl border border-slate-200 hover:scale-105 transition-transform">
-                <h3 class="text-xl font-bold mb-4">Enterprise</h3>
-                <p class="text-4xl font-bold mb-6">Custom</p>
-                <ul class="space-y-4 text-slate-500 mb-10">
-                    <li>Unlimited Users</li>
-                    <li>White-label Option</li>
-                    <li>On-premise Deployment</li>
-                    <li>Dedicated Account Mgr</li>
-                </ul>
-                <button class="w-full py-3 border border-blue-600 text-blue-600 rounded-xl font-bold hover:bg-blue-50 transition">Contact Sales</button>
-            </div>
-        </div>
-    </section>
+                <!-- Professional -->
+                <div class="p-10 rounded-[2.5rem] bg-clinical-900 text-white flex flex-col scale-105 shadow-2xl shadow-clinical-900/40 relative">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-clinical-600 text-white text-[10px] font-bold px-4 py-1 rounded-full uppercase tracking-widest">Most Deployed</div>
+                    <h4 class="text-lg font-bold text-clinical-400 mb-2">Hospital Pro</h4>
+                    <div class="flex items-baseline gap-1 mb-6">
+                        <span class="text-4xl font-black text-white">$499</span>
+                        <span class="text-clinical-400 font-medium">/month</span>
+                    </div>
+                    <p class="text-clinical-400 mb-8 font-medium">Comprehensive management for medium to large hospitals.</p>
+                    <ul class="space-y-4 mb-10 flex-1">
+                        <li class="flex items-center gap-3 text-sm font-semibold">
+                            <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                            Up to 30 Practitioners
+                        </li>
+                        <li class="flex items-center gap-3 text-sm font-semibold">
+                            <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                            Pharmacy & Inventory
+                        </li>
+                        <li class="flex items-center gap-3 text-sm font-semibold">
+                            <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                            Advanced Analytics
+                        </li>
+                        <li class="flex items-center gap-3 text-sm font-semibold">
+                            <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                            Billing & Insurance API
+                        </li>
+                    </ul>
+                    <a href="/register" class="w-full py-4 rounded-clinical bg-clinical-600 text-white font-bold hover:bg-clinical-500 transition text-center shadow-lg shadow-clinical-600/30">Select Professional</a>
+                </div>
 
-    <section class="py-24 bg-slate-50">
-        <div class="max-w-3xl mx-auto px-8">
-            <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
-            <div class="space-y-4">
-                <div class="bg-white p-6 rounded-xl border border-slate-200 cursor-pointer">
-                    <div class="flex justify-between items-center">
-                        <span class="font-bold">How long does implementation take?</span>
-                        <span>+</span>
+                <!-- Enterprise -->
+                <div class="p-10 rounded-[2.5rem] bg-clinical-50 border border-clinical-100 flex flex-col">
+                    <h4 class="text-lg font-bold text-clinical-600 mb-2">Enterprise</h4>
+                    <div class="flex items-baseline gap-1 mb-6">
+                        <span class="text-4xl font-black text-clinical-900">Custom</span>
                     </div>
-                </div>
-                <div class="bg-white p-6 rounded-xl border border-slate-200 cursor-pointer">
-                    <div class="flex justify-between items-center">
-                        <span class="font-bold">Is my data encrypted at rest?</span>
-                        <span>+</span>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-xl border border-slate-200 cursor-pointer">
-                    <div class="flex justify-between items-center">
-                        <span class="font-bold">Can we migrate from our current system?</span>
-                        <span>+</span>
-                    </div>
+                    <p class="text-clinical-500 mb-8 font-medium">For national healthcare networks and multi-facility groups.</p>
+                    <ul class="space-y-4 mb-10 flex-1">
+                        <li class="flex items-center gap-3 text-sm font-semibold text-clinical-700">
+                            <svg class="w-5 h-5 text-clinical-600" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                            Unlimited Everything
+                        </li>
+                        <li class="flex items-center gap-3 text-sm font-semibold text-clinical-700">
+                            <svg class="w-5 h-5 text-clinical-600" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                            Dedicated Infra Node
+                        </li>
+                        <li class="flex items-center gap-3 text-sm font-semibold text-clinical-700">
+                            <svg class="w-5 h-5 text-clinical-600" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                            Custom Feature Dev
+                        </li>
+                    </ul>
+                    <a href="#contact" class="w-full py-4 rounded-clinical bg-clinical-900 text-white font-bold hover:bg-clinical-800 transition text-center">Contact Sales</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 bg-blue-600 text-center text-white px-4">
-        <h2 class="text-4xl font-bold mb-8">Transform Your Hospital Operations Today.</h2>
-        <button class="bg-white text-blue-600 px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:bg-blue-50 transition transform hover:scale-105">
-            Request A Demo
-        </button>
+    <!-- Final CTA -->
+    <section class="bg-clinical-600 py-32 text-center text-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <h2 class="text-5xl font-black mb-8">Ready to Elevate Your Standard of Care?</h2>
+            <p class="text-xl text-clinical-100 mb-12 max-w-2xl mx-auto">Join the institutions redefining modern medicine with Hospily. Set up your facility in less than 30 minutes.</p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="/register" class="px-10 py-5 bg-white text-clinical-600 rounded-clinical font-black text-xl shadow-2xl hover:bg-clinical-50 transition transform hover:scale-105">
+                    Start Your Free Trial
+                </a>
+            </div>
+        </div>
     </section>
-</x-layout>
-
+</x-layouts.marketing>

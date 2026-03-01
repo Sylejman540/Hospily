@@ -34,7 +34,7 @@ class RegisterController extends Controller
         $validation = $request->validate([
             'name' => ['string', 'required', 'max:255'],
             'email' => ['email', 'required', 'unique:users,email', 'max:255'],
-            'password' => ['required', 'string', 'min:8'],
+            'password' => ['required', 'string', \Illuminate\Validation\Rules\Password::min(8)->letters()->numbers()->mixedCase()->symbols()],
             'facility_name' => ['string', 'required', 'max:255'],
         ]);
 
@@ -46,8 +46,9 @@ class RegisterController extends Controller
         ]);
 
         Auth::login($user);
+        $request->session()->regenerate();
 
-        return redirect('/');
+        return redirect('/dashboard');
     }
 
     /**

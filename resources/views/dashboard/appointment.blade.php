@@ -1,113 +1,80 @@
-<x-index-layout>
-        
-        <header class="flex justify-between items-center mb-10">
-            <div class="flex items-center gap-6">
-                <div>
-                    <h1 class="text-2xl font-bold text-slate-900">Schedule</h1>
-                    <p class="text-slate-500">Monday, March 2, 2026</p>
-                </div>
-                <div class="flex bg-white border border-slate-200 rounded-xl p-1 shadow-sm">
-                    <button class="px-4 py-1.5 text-sm font-bold bg-slate-100 text-slate-900 rounded-lg">Day</button>
-                    <button class="px-4 py-1.5 text-sm font-semibold text-slate-500 hover:text-slate-900 transition">Week</button>
-                    <button class="px-4 py-1.5 text-sm font-semibold text-slate-500 hover:text-slate-900 transition">Month</button>
-                </div>
-            </div>
-            
-            <div class="flex items-center gap-4">
-                <div class="flex -space-x-2">
-                    <div class="w-8 h-8 rounded-full border-2 border-white bg-blue-100 text-[10px] flex items-center justify-center font-bold">SJ</div>
-                    <div class="w-8 h-8 rounded-full border-2 border-white bg-green-100 text-[10px] flex items-center justify-center font-bold">AM</div>
-                    <div class="w-8 h-8 rounded-full border-2 border-white bg-amber-100 text-[10px] flex items-center justify-center font-bold">BC</div>
-                </div>
-                <button class="bg-blue-600 px-6 py-2.5 rounded-xl text-white font-bold text-sm shadow-lg shadow-blue-100 hover:bg-blue-700 transition">+ New Booking</button>
-            </div>
-        </header>
-
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-            
-            <div class="space-y-4">
-                <div class="flex justify-between items-center px-2">
-                    <h3 class="font-bold text-slate-400 text-xs uppercase tracking-widest">Waiting (4)</h3>
-                    <span class="w-5 h-5 bg-slate-200 text-slate-600 rounded-full text-[10px] flex items-center justify-center font-bold">4</span>
-                </div>
-                
-                <div class="bg-white p-4 rounded-2xl border-l-4 border-amber-400 shadow-sm hover:shadow-md transition cursor-pointer">
-                    <p class="text-[10px] font-bold text-amber-600 uppercase mb-1">General Checkup</p>
-                    <h4 class="font-bold text-slate-900 text-sm">Theresa Webb</h4>
-                    <p class="text-xs text-slate-500 mt-1">Arrival: 08:45 AM</p>
-                    <div class="mt-3 pt-3 border-t border-slate-50 flex items-center gap-2">
-                        <div class="w-5 h-5 rounded-full bg-slate-100 flex items-center justify-center text-[8px] font-bold">DR</div>
-                        <p class="text-[10px] text-slate-400 font-medium">Dr. Sarah Jenkins</p>
-                    </div>
-                </div>
-
-                <div class="bg-white p-4 rounded-2xl border-l-4 border-amber-400 shadow-sm opacity-80">
-                    <p class="text-[10px] font-bold text-amber-600 uppercase mb-1">Lab Results</p>
-                    <h4 class="font-bold text-slate-900 text-sm">Cody Fisher</h4>
-                    <p class="text-xs text-slate-500 mt-1">Arrival: 09:10 AM</p>
-                </div>
-            </div>
-
-            <div class="space-y-4">
-                <div class="flex justify-between items-center px-2">
-                    <h3 class="font-bold text-blue-600 text-xs uppercase tracking-widest">In Progress (2)</h3>
-                </div>
-                
-                <div class="bg-blue-600 p-4 rounded-2xl shadow-xl shadow-blue-100 ring-4 ring-blue-50">
-                    <p class="text-[10px] font-bold text-blue-100 uppercase mb-1">Emergency Surgery</p>
-                    <h4 class="font-bold text-white text-sm">Marvin McKinney</h4>
-                    <div class="flex items-center gap-2 mt-2">
-                        <span class="w-2 h-2 rounded-full bg-red-400 animate-ping"></span>
-                        <p class="text-xs text-blue-100 font-medium">Theater 04 • 45m elapsed</p>
-                    </div>
-                </div>
-
-                <div class="bg-white p-4 rounded-2xl border-l-4 border-blue-500 shadow-sm">
-                    <p class="text-[10px] font-bold text-blue-600 uppercase mb-1">Follow-up</p>
-                    <h4 class="font-bold text-slate-900 text-sm">Eleanor Pena</h4>
-                    <p class="text-xs text-slate-500 mt-1">Room 202 • Dr. McCoy</p>
-                </div>
-            </div>
-
-            <div class="space-y-4">
-                <div class="flex justify-between items-center px-2 text-slate-400">
-                    <h3 class="font-bold text-xs uppercase tracking-widest">Completed</h3>
-                </div>
-                
-                <div class="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm opacity-60">
-                    <h4 class="font-bold text-slate-900 text-sm line-through">Guy Hawkins</h4>
-                    <p class="text-xs text-green-600 font-bold mt-1">✓ Prescribed</p>
-                </div>
-            </div>
-
-            <div class="space-y-4">
-                <div class="flex justify-between items-center px-2 text-slate-400">
-                    <h3 class="font-bold text-xs uppercase tracking-widest">Cancelled</h3>
-                </div>
-                
-                <div class="bg-slate-100 p-4 rounded-2xl border border-dashed border-slate-300">
-                    <h4 class="font-bold text-slate-400 text-sm italic">Kathryn Murphy</h4>
-                    <p class="text-xs text-slate-400 mt-1">Cancelled via SMS</p>
-                </div>
-            </div>
-
+<x-layouts.app title="Appointment Registry">
+    <div class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div>
+            <h1 class="text-3xl font-black text-clinical-900 tracking-tight">Clinical Registry</h1>
+            <p class="text-clinical-500 font-medium mt-1">Operational view of scheduled consultations and procedures.</p>
         </div>
-
-        <div class="mt-12 bg-white rounded-3xl p-8 border border-slate-100 shadow-sm">
-            <h4 class="font-bold text-slate-900 mb-6">Staff Availability Today</h4>
-            <div class="flex items-center gap-8 overflow-x-auto pb-4">
-                <div class="flex flex-col items-center gap-2 min-w-[100px]">
-                    <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center font-bold text-blue-600">SJ</div>
-                    <p class="text-xs font-bold">Dr. Jenkins</p>
-                    <span class="px-2 py-0.5 bg-red-100 text-red-600 text-[10px] font-bold rounded">Busy</span>
-                </div>
-                <div class="flex flex-col items-center gap-2 min-w-[100px]">
-                    <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center font-bold text-blue-600">AM</div>
-                    <p class="text-xs font-bold">Dr. McCoy</p>
-                    <span class="px-2 py-0.5 bg-green-100 text-green-600 text-[10px] font-bold rounded">Available</span>
-                </div>
-                </div>
+        <div class="flex items-center gap-3">
+            <button class="px-5 py-2.5 bg-white border border-clinical-200 rounded-clinical text-sm font-bold text-clinical-600 hover:bg-clinical-50 transition-all shadow-sm">
+                Operational Forecast
+            </button>
+            <button class="px-5 py-2.5 bg-clinical-600 rounded-clinical text-sm font-bold text-white hover:bg-clinical-700 transition-all shadow-lg shadow-clinical-200">
+                + Schedule Consultation
+            </button>
         </div>
-    </main>
-</div>
-</x-index-layout>
+    </div>
+
+    <!-- Calendar View Toggle -->
+    <div class="flex items-center gap-1 p-1 bg-clinical-100/50 rounded-xl w-fit mb-8 border border-clinical-100">
+        <button class="px-6 py-2 bg-white rounded-lg text-xs font-black uppercase tracking-widest text-clinical-900 shadow-sm border border-clinical-100">List View</button>
+        <button class="px-6 py-2 text-xs font-black uppercase tracking-widest text-clinical-500 hover:text-clinical-900 transition-colors">Calendar</button>
+        <button class="px-6 py-2 text-xs font-black uppercase tracking-widest text-clinical-500 hover:text-clinical-900 transition-colors">By Clinician</button>
+    </div>
+
+    <!-- Appointments Table -->
+    <div class="bg-white rounded-3xl border border-clinical-100 shadow-sm overflow-hidden">
+        <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-clinical-50/50">
+                        <th class="px-8 py-4 text-[10px] font-black text-clinical-400 uppercase tracking-[0.2em] border-b border-clinical-100">Identity</th>
+                        <th class="px-8 py-4 text-[10px] font-black text-clinical-400 uppercase tracking-[0.2em] border-b border-clinical-100">Consultant</th>
+                        <th class="px-8 py-4 text-[10px] font-black text-clinical-400 uppercase tracking-[0.2em] border-b border-clinical-100">Scheduled Time</th>
+                        <th class="px-8 py-4 text-[10px] font-black text-clinical-400 uppercase tracking-[0.2em] border-b border-clinical-100">Procedure</th>
+                        <th class="px-8 py-4 text-[10px] font-black text-clinical-400 uppercase tracking-[0.2em] border-b border-clinical-100 text-right">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-clinical-50">
+                    @php
+                        $appointments = [
+                            ['patient' => 'Robert Fox', 'clinician' => 'Dr. Arlene McCoy', 'time' => '09:30 AM', 'procedure' => 'Cardiology Follow-up', 'status' => 'Confirmed', 'color' => 'emerald'],
+                            ['patient' => 'Jane Cooper', 'initials' => 'JC', 'clinician' => 'Dr. Bessie Cooper', 'time' => '10:15 AM', 'procedure' => 'Post-op Review', 'status' => 'Urgent', 'color' => 'red'],
+                            ['patient' => 'Wade Warren', 'clinician' => 'Dr. Arlene McCoy', 'time' => '11:00 AM', 'procedure' => 'General Consult', 'status' => 'Pending', 'color' => 'amber'],
+                            ['patient' => 'Brooklyn Simmons', 'clinician' => 'Dr. Jacob Jones', 'time' => '01:30 PM', 'procedure' => 'Imaging Report', 'status' => 'Confirmed', 'color' => 'blue'],
+                            ['patient' => 'Guy Hawkins', 'clinician' => 'Dr. Robert Fox', 'time' => '02:45 PM', 'procedure' => 'Lab Results', 'status' => 'Confirmed', 'color' => 'emerald'],
+                        ];
+                    @endphp
+
+                    @foreach($appointments as $appt)
+                    <tr class="group hover:bg-clinical-50/30 transition-colors">
+                        <td class="px-8 py-6">
+                            <span class="font-bold text-clinical-900 block">{{ $appt['patient'] }}</span>
+                            <span class="text-[10px] font-black uppercase text-clinical-400 tracking-widest">Priority Care</span>
+                        </td>
+                        <td class="px-8 py-6">
+                            <div class="flex items-center gap-3">
+                                <div class="w-6 h-6 rounded-full bg-clinical-900 flex items-center justify-center">
+                                    <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+                                </div>
+                                <span class="text-sm text-clinical-600 font-medium">{{ $appt['clinician'] }}</span>
+                            </div>
+                        </td>
+                        <td class="px-8 py-6">
+                            <span class="text-sm text-clinical-900 font-black">{{ $appt['time'] }}</span>
+                            <span class="text-[10px] font-bold text-clinical-400 block uppercase">Today</span>
+                        </td>
+                        <td class="px-8 py-6">
+                            <span class="text-xs font-bold text-clinical-500 italic">{{ $appt['procedure'] }}</span>
+                        </td>
+                        <td class="px-8 py-6 text-right">
+                            <span class="inline-flex items-center px-3 py-1 bg-{{ $appt['color'] }}-50 text-{{ $appt['color'] }}-700 rounded-lg text-[10px] font-black uppercase tracking-widest border border-{{ $appt['color'] }}-100">
+                                {{ $appt['status'] }}
+                            </span>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+    </div>
+</x-layouts.app>
