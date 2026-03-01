@@ -32,6 +32,9 @@
             <a href="#solutions" class="relative nav-link">Solutions</a>
             <a href="#pricing" class="relative nav-link">Pricing</a>
             <a href="#contact" class="relative nav-link">Contact</a>
+            @auth
+            <a href="/dashboard" class="relative nav-link">Dashboard</a>
+            @endauth
         </div>
 
         <div class="hidden md:flex items-center gap-4">
@@ -68,6 +71,9 @@
                 <a href="#solutions" class="hover:text-blue-400">Solutions</a>
                 <a href="#pricing" class="hover:text-blue-400">Pricing</a>
                 <a href="#contact" class="hover:text-blue-400">Contact</a>
+                @auth
+                <a href="/dashboard" class="hover:text-blue-400">Dashboard</a>
+                @endauth
                 <hr class="w-1/2 border-white/10">
                 @guest
                 <a href="/login">
