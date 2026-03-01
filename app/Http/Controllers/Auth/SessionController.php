@@ -31,32 +31,21 @@ class SessionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validation = $request->validate([
+            'email' => 'required',
+            'password' => 'required',
+        ]);
+
+        if(Auth::attempt($validation)){
+            $request->session()->regenerate();
+            return redirect()->intended('/');
+        }
+
+        return back()->withErrors([
+            'email' => 'Invalid credentials',
+        ]);
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Session $session)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Session $session)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Session $session)
-    {
-        //
-    }
 
     /**
      * Remove the specified resource from storage.

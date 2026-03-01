@@ -48,7 +48,7 @@
             <form action="/logout" method="post">
                 @csrf
                 @method('Delete')
-                <button class="w-2/3 py-3 border border-white/20 rounded-xl">Logout</button>
+                <button class="">Logout</button>
             </form>
             @endauth
         </div>
@@ -82,7 +82,7 @@
                 <form action="/logout" method="post">
                     @csrf
                     @method('Delete')
-                    <button class="w-2/3 py-3 border border-white/20 rounded-xl">Logout</button>
+                    <button>Logout</button>
                 </form>
                 @endauth
             </div>

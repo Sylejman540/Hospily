@@ -14,24 +14,36 @@
                     <label for="name" class="text-sm font-semibold text-slate-700 ml-1">Full Name</label>
                     <input type="text" id="name" name="name" placeholder="Dr. Julian Reed" required
                         class="px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all placeholder:text-slate-300">
+                    @error('name')
+                        <p class="text-red-500 text-sm">{{ $message }}</p>
+                    @enderror
                 </div>
 
                 <div class="flex flex-col gap-2">
                     <label for="email" class="text-sm font-semibold text-slate-700 ml-1">Work Email</label>
                     <input type="email" id="email" name="email" placeholder="julian@hospital-city.org" required
                         class="px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all placeholder:text-slate-300">
+                    @error('email')
+                        <p class="text-red-500 text-sm">{{ $message }}</p>
+                    @enderror
                 </div>
 
                 <div class="flex flex-col gap-2">
                     <label for="password" class="text-sm font-semibold text-slate-700 ml-1">Password</label>
                     <input type="password" id="password" name="password" placeholder="Password"
                         class="px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all placeholder:text-slate-300">
+                    @error('password')
+                        <p class="text-red-500 text-sm">{{ $message }}</p>
+                    @enderror
                 </div>
 
                 <div class="flex flex-col gap-2">
                     <label for="facility_name" class="text-sm font-semibold text-slate-700 ml-1">Medical Facility Name</label>
                     <input type="text" id="facility_name" name="facility_name" placeholder="St. Mary's General"
                         class="px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all placeholder:text-slate-300">
+                    @error('facility_name')
+                        <p class="text-red-500 text-sm">{{ $message }}</p>
+                    @enderror
                 </div>
 
                 <div class="md:col-span-2 flex items-start gap-3 py-2">
