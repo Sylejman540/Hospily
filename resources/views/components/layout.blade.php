@@ -37,7 +37,9 @@
 
         <div class="hidden md:flex items-center gap-4">
             <button class="hover:text-blue-200 transition">Login</button>
-            <button class="bg-white text-blue-600 px-5 py-2 rounded-full font-semibold hover:bg-blue-50 transition">Register</button>
+            <a href="/register">
+                <button class="bg-white text-blue-600 px-5 py-2 rounded-full font-semibold hover:bg-blue-50 transition">Register</button>
+            </a>
         </div>
 
         <label for="menu-toggle" class="cursor-pointer md:hidden block z-50">
