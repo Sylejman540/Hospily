@@ -1,4 +1,4 @@
-<x-layouts.app title="Clinical Overview">
+<x-index-layout title="Clinical Overview">
     <div class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div>
             <h1 class="text-3xl font-black text-clinical-900 tracking-tight">System Statistics</h1>
@@ -185,4 +185,4 @@
             </div>
         </div>
     </div>
-</x-layouts.app>
+</x-index-layout>
