@@ -22,20 +22,15 @@
                 </div>
 
                 <div class="flex flex-col gap-2">
-                    <label for="hospital" class="text-sm font-semibold text-slate-700 ml-1">Medical Facility Name</label>
-                    <input type="text" id="hospital" name="hospital" placeholder="St. Mary's General"
+                    <label for="password" class="text-sm font-semibold text-slate-700 ml-1">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Password"
                         class="px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all placeholder:text-slate-300">
                 </div>
 
                 <div class="flex flex-col gap-2">
-                    <label for="size" class="text-sm font-semibold text-slate-700 ml-1">Facility Size</label>
-                    <select id="size" name="size" 
-                        class="px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all bg-white text-slate-600 appearance-none cursor-pointer">
-                        <option value="small">Clinic (1-10 Beds)</option>
-                        <option value="medium" selected>Medical Center (10-100 Beds)</option>
-                        <option value="large">Hospital (100+ Beds)</option>
-                        <option value="network">National Health Network</option>
-                    </select>
+                    <label for="hospital" class="text-sm font-semibold text-slate-700 ml-1">Medical Facility Name</label>
+                    <input type="text" id="hospital" name="hospital" placeholder="St. Mary's General"
+                        class="px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all placeholder:text-slate-300">
                 </div>
 
                 <div class="md:col-span-2 flex items-start gap-3 py-2">
