@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\Register;
 use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash; 
 
 class RegisterController extends Controller
 {
@@ -30,17 +33,21 @@ class RegisterController extends Controller
     {
         $validation = $request->validate([
             'name' => ['string', 'required', 'max:255'],
-            'email' => ['email', 'required', 'max:255'],
-            'password' => ['required', Password::defaults()],
+            'email' => ['email', 'required', 'unique:users,email', 'max:255'],
+            'password' => ['required', 'string', 'min:8'],
             'facility_name' => ['string', 'required', 'max:255'],
         ]);
 
         $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => $request->password,
-            'facility_name' => $request->facility_name,
+            'name' => $validation['name'],
+            'email' => $validation['email'],
+            'password' => Hash::make($validation['password']),
+            'facility_name' => $validation['facility_name'],
         ]);
+
+        Auth::login($user);
+
+        return redirect('/');
     }
 
     /**
