@@ -7,7 +7,8 @@
         </div>
 
         <div class="bg-white rounded-3xl shadow-2xl border border-slate-100 p-8 md:p-12">
-            <form action="#" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <form action="/register" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                @csrf
                 
                 <div class="flex flex-col gap-2">
                     <label for="name" class="text-sm font-semibold text-slate-700 ml-1">Full Name</label>
@@ -28,8 +29,8 @@
                 </div>
 
                 <div class="flex flex-col gap-2">
-                    <label for="hospital" class="text-sm font-semibold text-slate-700 ml-1">Medical Facility Name</label>
-                    <input type="text" id="hospital" name="hospital" placeholder="St. Mary's General"
+                    <label for="facility_name" class="text-sm font-semibold text-slate-700 ml-1">Medical Facility Name</label>
+                    <input type="text" id="facility_name" name="facility_name" placeholder="St. Mary's General"
                         class="px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all placeholder:text-slate-300">
                 </div>
 
