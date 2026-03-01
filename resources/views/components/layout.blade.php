@@ -43,10 +43,13 @@
                 <button class="bg-white text-blue-600 px-5 py-2 rounded-full font-semibold hover:bg-blue-50 transition">Register</button>
             </a>
             @endguest
+
             @auth
-            <a href="/logout">
-                <button class="hover:text-blue-200 transition">Logout</button>
-            </a>
+            <form action="/logout" method="post">
+                @csrf
+                @method('Delete')
+                <button class="w-2/3 py-3 border border-white/20 rounded-xl">Logout</button>
+            </form>
             @endauth
         </div>
 
@@ -74,10 +77,13 @@
                 <button class="w-2/3 py-3 bg-blue-600 rounded-xl">Register</button>
                 </a>
                 @endguest
+
                 @auth
-                <a href="/logout">
-                <button class="w-2/3 py-3 border border-white/20 rounded-xl">Logout</button>
-                </a>
+                <form action="/logout" method="post">
+                    @csrf
+                    @method('Delete')
+                    <button class="w-2/3 py-3 border border-white/20 rounded-xl">Logout</button>
+                </form>
                 @endauth
             </div>
         </label>
