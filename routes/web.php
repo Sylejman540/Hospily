@@ -9,14 +9,10 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard.index');
+    return view('dashboard.dashboard');
 });
-Route::get('/patients', function() {
-    return view('dashboard.patient');
-});
-Route::get('/appointments', function() {
-    return view('dashboard.appointment');
-});
+
+
 
 Route::middleware('auth')->group(function () {
     Route::delete("/logout", [SessionController::class, 'destroy']);
