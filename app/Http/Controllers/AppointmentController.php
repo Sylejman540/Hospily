@@ -56,7 +56,8 @@ class AppointmentController extends Controller
         // Verify clinician belongs to same facility
         $clinician = \App\Models\User::find($request->clinician_id);
         if ($clinician->facility_id !== auth()->user()->facility_id) {
-            return response()->json(['message' => 'Clinician does not belong to your facility'], 422);
+            return redirect()->route('appointments.index')
+                ->with('error', 'Clinician does not belong to your facility.');
         }
 
         $appointment = Appointment::create([
@@ -70,7 +71,8 @@ class AppointmentController extends Controller
             'notes' => $request->notes,
         ]);
 
-        return response()->json($appointment->load('patient', 'clinician', 'department'), 201);
+        return redirect()->route('appointments.index')
+            ->with('success', "Appointment scheduled successfully for {$appointment->patient->full_name}.");
     }
 
     /**
@@ -99,10 +101,13 @@ class AppointmentController extends Controller
     {
         $this->authorize('update', $appointment);
 
-        // Verify clinician belongs to same facility
-        $clinician = \App\Models\User::find($request->clinician_id);
-        if ($clinician->facility_id !== auth()->user()->facility_id) {
-            return response()->json(['message' => 'Clinician does not belong to your facility'], 422);
+        // Verify clinician belongs to same facility if being changed
+        if ($request->has('clinician_id') && $request->clinician_id != $appointment->clinician_id) {
+            $clinician = \App\Models\User::find($request->clinician_id);
+            if ($clinician->facility_id !== auth()->user()->facility_id) {
+                return redirect()->route('appointments.index')
+                    ->with('error', 'Clinician does not belong to your facility.');
+            }
         }
 
         $appointment->update([
@@ -115,7 +120,8 @@ class AppointmentController extends Controller
             'notes' => $request->notes,
         ]);
 
-        return response()->json($appointment->load('patient', 'clinician', 'department'));
+        return redirect()->route('appointments.index')
+            ->with('success', 'Appointment updated successfully.');
     }
 
     /**
@@ -151,7 +157,8 @@ class AppointmentController extends Controller
             description: "Appointment #{$appointment->id} status changed from {$oldStatus} to {$validated['status']}"
         );
 
-        return response()->json(['message' => 'Status updated successfully', 'appointment' => $appointment]);
+        return redirect()->back()
+            ->with('success', "Appointment status updated to {$validated['status']}.");
     }
 
     /**
@@ -161,8 +168,10 @@ class AppointmentController extends Controller
     {
         $this->authorize('delete', $appointment);
 
+        $patientName = $appointment->patient->full_name;
         $appointment->delete();
 
-        return response()->json(['message' => 'Appointment deleted successfully']);
+        return redirect()->route('appointments.index')
+            ->with('success', "Appointment for {$patientName} deleted successfully.");
     }
 }

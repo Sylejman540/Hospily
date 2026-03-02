@@ -57,7 +57,8 @@ class PatientController extends Controller
             ]);
         });
 
-        return response()->json($patient, 201);
+        return redirect()->route('patients.index')
+            ->with('success', "Patient {$patient->full_name} (MRN: {$patient->mrn}) registered successfully.");
     }
 
     /**
@@ -107,7 +108,8 @@ class PatientController extends Controller
         $this->authorize('update', $patient);
 
         if ($patient->isDischarged()) {
-            return response()->json(['message' => 'Patient is already discharged'], 422);
+            return redirect()->route('patients.index')
+                ->with('error', 'Patient is already discharged.');
         }
 
         $oldStatus = $patient->care_status;
@@ -131,7 +133,8 @@ class PatientController extends Controller
             description: "Patient {$patient->full_name} (MRN: {$patient->mrn}) discharged"
         );
 
-        return response()->json(['message' => 'Patient discharged successfully', 'patient' => $patient]);
+        return redirect()->route('patients.index')
+            ->with('success', "Patient {$patient->full_name} (MRN: {$patient->mrn}) discharged successfully.");
     }
 
     /**
@@ -141,9 +144,12 @@ class PatientController extends Controller
     {
         $this->authorize('delete', $patient);
 
+        $patientName = $patient->full_name;
+        $mrn = $patient->mrn;
         $patient->delete();
 
-        return response()->json(['message' => 'Patient deleted successfully']);
+        return redirect()->route('patients.index')
+            ->with('success', "Patient {$patientName} (MRN: {$mrn}) deleted successfully.");
     }
 }
 

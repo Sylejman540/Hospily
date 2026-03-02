@@ -49,31 +49,14 @@ Route::middleware('auth')->group(function () {
 
     // ====== PATIENTS (Admins & Clinicians) ======
     Route::middleware('clinician')->group(function () {
-        Route::get('/patients', function () { return view('dashboard.patient');});
-
-        Route::post('patients/{patient}/discharge', [PatientController::class, 'discharge']);
-        
-        // API endpoints (duplicate for convenience)
-        Route::get('/api/patients', [PatientController::class, 'index']);
-        Route::post('/api/patients', [PatientController::class, 'store']);
-        Route::get('/api/patients/{patient}', [PatientController::class, 'show']);
-        Route::patch('/api/patients/{patient}', [PatientController::class, 'update']);
-        Route::delete('/api/patients/{patient}', [PatientController::class, 'destroy']);
-        Route::post('/api/patients/{patient}/discharge', [PatientController::class, 'discharge']);
+        Route::resource('patients', PatientController::class);
+        Route::post('patients/{patient}/discharge', [PatientController::class, 'discharge'])->name('patients.discharge');
     });
 
     // ====== APPOINTMENTS (Admins & Clinicians) ======
     Route::middleware('clinician')->group(function () {
-        Route::get('/api/appointments', [AppointmentController::class, 'index']);
-        Route::patch('appointments/{appointment}/status', [AppointmentController::class, 'updateStatus']);
-        
-        // API endpoints (duplicate for convenience)
-        Route::get('/api/appointments', [AppointmentController::class, 'index']);
-        Route::post('/api/appointments', [AppointmentController::class, 'store']);
-        Route::get('/api/appointments/{appointment}', [AppointmentController::class, 'show']);
-        Route::patch('/api/appointments/{appointment}', [AppointmentController::class, 'update']);
-        Route::patch('/api/appointments/{appointment}/status', [AppointmentController::class, 'updateStatus']);
-        Route::delete('/api/appointments/{appointment}', [AppointmentController::class, 'destroy']);
+        Route::resource('appointments', AppointmentController::class);
+        Route::patch('appointments/{appointment}/status', [AppointmentController::class, 'updateStatus'])->name('appointments.updateStatus');
     });
 
     // ====== HANDOVER ALERTS (Admin-create, all-view) ======
