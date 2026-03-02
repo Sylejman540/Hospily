@@ -4,6 +4,8 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -46,5 +48,53 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    /**
+     * Get the facility this user belongs to
+     */
+    public function facility(): BelongsTo
+    {
+        return $this->belongsTo(Facility::class);
+    }
+
+    /**
+     * Get appointments where this user is the clinician
+     */
+    public function appointments(): HasMany
+    {
+        return $this->hasMany(Appointment::class, 'clinician_id');
+    }
+
+    /**
+     * Get alerts created by this user
+     */
+    public function createdAlerts(): HasMany
+    {
+        return $this->hasMany(HandoverAlert::class, 'created_by');
+    }
+
+    /**
+     * Check if user is admin
+     */
+    public function isAdmin(): bool
+    {
+        return $this->role === 'admin';
+    }
+
+    /**
+     * Check if user is clinician
+     */
+    public function isClinician(): bool
+    {
+        return $this->role === 'clinician';
+    }
+
+    /**
+     * Check if user is staff
+     */
+    public function isStaff(): bool
+    {
+        return $this->role === 'staff';
     }
 }
