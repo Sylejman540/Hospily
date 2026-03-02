@@ -37,7 +37,6 @@ Route::middleware('auth')->group(function () {
 
     Route::delete("/logout", [SessionController::class, 'destroy']);
 
-    // ====== DEPARTMENTS (Admin only) ======
     Route::middleware('admin')->group(function () {
         Route::resource('departments', DepartmentController::class);
         Route::get('/api/departments', [DepartmentController::class, 'index']);
@@ -47,19 +46,16 @@ Route::middleware('auth')->group(function () {
         Route::delete('/api/departments/{department}', [DepartmentController::class, 'destroy']);
     });
 
-    // ====== PATIENTS (Admins & Clinicians) ======
     Route::middleware('clinician')->group(function () {
         Route::resource('patients', PatientController::class);
         Route::post('patients/{patient}/discharge', [PatientController::class, 'discharge'])->name('patients.discharge');
     });
 
-    // ====== APPOINTMENTS (Admins & Clinicians) ======
     Route::middleware('clinician')->group(function () {
         Route::resource('appointments', AppointmentController::class);
         Route::patch('appointments/{appointment}/status', [AppointmentController::class, 'updateStatus'])->name('appointments.updateStatus');
     });
 
-    // ====== HANDOVER ALERTS (Admin-create, all-view) ======
     Route::get('alerts', [AlertController::class, 'index']); // All authenticated users can view
     Route::get('/api/alerts', [AlertController::class, 'index']);
     Route::get('/api/alerts/{handover_alert}', [AlertController::class, 'show']);
