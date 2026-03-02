@@ -19,14 +19,13 @@ class PatientController extends Controller
     public function index()
     {
         $perPage = request()->input('per_page', 15);
-        
+
         $patients = Patient::with('department')
             ->orderBy('last_name')
             ->paginate($perPage);
 
-        return response()->json($patients);
+        return view('dashboard.patient', compact('patients'));
     }
-
     /**
      * Show form for creating a patient (non-API)
      */

@@ -49,7 +49,8 @@ Route::middleware('auth')->group(function () {
 
     // ====== PATIENTS (Admins & Clinicians) ======
     Route::middleware('clinician')->group(function () {
-        Route::resource('patients', PatientController::class);
+        Route::get('/patients', function () { return view('dashboard.patient');});
+
         Route::post('patients/{patient}/discharge', [PatientController::class, 'discharge']);
         
         // API endpoints (duplicate for convenience)
@@ -63,7 +64,7 @@ Route::middleware('auth')->group(function () {
 
     // ====== APPOINTMENTS (Admins & Clinicians) ======
     Route::middleware('clinician')->group(function () {
-        Route::resource('appointments', AppointmentController::class)->only(['index', 'store', 'show', 'update', 'destroy']);
+        Route::get('/api/appointments', [AppointmentController::class, 'index']);
         Route::patch('appointments/{appointment}/status', [AppointmentController::class, 'updateStatus']);
         
         // API endpoints (duplicate for convenience)

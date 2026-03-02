@@ -19,40 +19,25 @@ class AppointmentController extends Controller
      * - clinician_id: Filter by clinician (only own if not admin)
      * - per_page: Results per page (default: 15)
      */
-    public function index(Request $request)
+   public function index(Request $request)
     {
-        $query = Appointment::with('patient', 'clinician', 'department');
+        $query = Appointment::with(['patient', 'clinician', 'department']);
 
-        // Date range filtering
         if ($request->filled('start_date') && $request->filled('end_date')) {
             $query->dateRange($request->start_date, $request->end_date);
         }
 
-        // Status filtering
         if ($request->filled('status')) {
             $query->byStatus($request->status);
         }
 
-        // Clinician filtering
-        if ($request->filled('clinician_id')) {
-            $clinicianId = $request->clinician_id;
-
-            // Non-admins can only view their own appointments
-            if (!auth()->user()->isAdmin() && $clinicianId != auth()->id()) {
-                return response()->json(['message' => 'Unauthorized'], 403);
-            }
-
-            $query->forClinician($clinicianId);
-        } elseif (!auth()->user()->isAdmin()) {
-            // Non-admins see only their own appointments by default
+        if (!auth()->user()->isAdmin()) {
             $query->forClinician(auth()->id());
         }
 
-        // Add pagination support
-        $perPage = $request->input('per_page', 15);
-        $appointments = $query->orderBy('scheduled_at')->paginate($perPage);
+        $appointments = $query->orderBy('scheduled_at')->paginate(15);
 
-        return response()->json($appointments);
+        return view('dashboard.appointment', compact('appointments'));
     }
 
     /**
